@@ -1,0 +1,92 @@
+/* General Styling */
+body {
+    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Glassmorphism Effect for the Form Container */
+.container {
+    background: rgba(255, 255, 255, 0.1); /* Transparent white background */
+    border-radius: 15px;
+    backdrop-filter: blur(10px); /* Blur effect */
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    padding: 20px;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+    transition: box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.3);
+    transform: translateY(0px);
+}
+
+/* Custom Submit Button */
+.custom-submit-btn {
+    box-shadow: 2px 5px 8px grey;
+    background-color: purple;
+    border-color: purple;
+    color: white;
+}
+.custom-submit-btn:hover{
+    
+    background-color: purple;
+}
+
+/* Form Validation Feedback */
+.invalid-feedback {
+    display: none;
+    color: red;
+}
+
+/* Bootstrap Modal Styling */
+.modal-content {
+    background:#DBE7F3; /* Transparent white background */
+    border-radius: 15px;
+    color: black;
+    backdrop-filter: blur(3px); /* Blur effect */
+    border: 1px solid white;
+    box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header, .modal-footer {
+    border: none;
+}
+
+.modal-title, .modal-body {
+    color: rgb(7, 7, 7);
+    
+    justify-content: center;
+}
+
+/* Fallback for browsers that do not support backdrop-filter */
+@supports not (backdrop-filter: blur(3px)) {
+    .container, .modal-content {
+        background: white;
+        border: 1px solid rgba(0, 0, 0, 0.2);
+    }
+}
+
+/* Bootstrap Modal Close Button Styling */
+.btn-secondary {
+    background-color: darkblue;
+    color: white;
+}
+.error-icon {
+    display: none;
+    color: red;
+    cursor: pointer;
+}
+
+.error-icon::before {
+    content: "!";
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    text-align: center;
+    line-height: 20px;
+    background-color: red;
+    color: white;
+    margin-left: 10px;
+}
+

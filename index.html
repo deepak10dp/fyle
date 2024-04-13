@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tax Calculator</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/my-tax-calculator/css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-md-6">
+                <h1 class="text-center mt-5">Tax Calculator</h1>
+                <form id="tax-form" novalidate>
+                    <div class="form-group">
+                        <label for="gross-income">Gross Annual Income <span class="error-icon" data-toggle="tooltip" data-placement="right" title="Please enter a valid number."></span></label>
+                        <input type="text" class="form-control" id="gross-income" placeholder="Enter Gross Annual Income" required>
+                        <span class="error-icon" data-toggle="tooltip" data-placement="right" title="Please enter a valid number."></span>
+                        <div class="invalid-feedback1" style="display: none;">Please enter a valid number.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="extra-income">Extra Income</label>
+                        <input type="text" class="form-control" id="extra-income" placeholder="Enter Extra Income" required>
+                        <span class="error-icon" data-toggle="tooltip" data-placement="right" title="Please enter a valid number."></span>
+                        <div class="invalid-feedback2" style="display: none;">Please enter a valid number.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="deductions">Deductions</label>
+                        <input type="text" class="form-control" id="deductions" placeholder="Enter Deductions" required>
+                        <span class="error-icon" data-toggle="tooltip" data-placement="right" title="Please enter a valid number."></span>
+                        <div class="invalid-feedback3" style="display: none;">Please enter a valid number.</div>
+                    </div>
+                    <div class="form-group">
+                        <label for="age-group">Age Group</label>
+                        <select class="form-control" id="age-group" required>
+                            <option value="">Select Age Group</option>
+                            <option value="<40">&lt; 40</option>
+                            <option value="40-60">&ge; 40 &amp; &lt; 60</option>
+                            <option value="60+">&ge; 60</option>
+                        </select>
+                        <div class="invalid-feedback" style="display: none;">Age group is required.</div>
+                    </div>
+                    <button type="submit" class="btn btn-primary custom-submit-btn">Calculate Tax</button>
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- Bootstrap Modal -->
+    <div class="modal fade" id="incomeModal" tabindex="-1" role="dialog" aria-labelledby="incomeModalLabel" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="incomeModalLabel">Income Calculation</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <!-- The message will be dynamically inserted here -->
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Include jQuery and Bootstrap JS -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <!-- Custom JavaScript -->
+    <script src="/my-tax-calculator/js/script.js"></script>
+</body>
+</html>
